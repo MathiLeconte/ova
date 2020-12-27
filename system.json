@@ -3,7 +3,7 @@
 	"title": "Open Versatile Anime",
 	"description": "A Open Versatile Anime System for Foundry VTT",
 	"author":"Ceizyl & Tyr",
-	"version": 0.01,
+	"version": 0.02,
 	"minimumCoreVersion": "0.7.8",
 	"compatibleCoreVersion": "0.7.8",
 	"esmodules": [
