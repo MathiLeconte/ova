@@ -1,0 +1,26 @@
+{
+	"name":"ova",
+	"title": "Open Versatile Anime",
+	"description": "A Open Versatile Anime System for Foundry VTT",
+	"author":"Ceizyl & Tyr",
+	"version": 0.01,
+	"minimumCoreVersion": "0.7.8",
+	"compatibleCoreVersion": "0.7.8",
+	"esmodules": [
+	"ova.js"
+	],
+	"styles": [
+	"ova.css"
+	],
+	"packs": [
+	
+	],
+	"languages":[
+	
+	],
+	"gridDistance": 1,
+	"gridUnits": "m",
+	"primaryTokenAttribute" : "sante",
+	"secondaryTokenAttribute": "endurence",
+	"initiative": "1d6+ @initiative"
+}

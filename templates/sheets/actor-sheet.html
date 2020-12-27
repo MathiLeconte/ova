@@ -1,0 +1,65 @@
+<form class="actor-sheet {{cssClass}}" autocomplete="off">
+    <header class="sheet-header">
+        <img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="64" width="64"/>
+        <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
+    </header>
+	TV
+	<input name="data.tv" type="number" value="{{actor.data.tv}}" placeholder="2"/>
+	Defense
+	<input name="data.defense" type="number" value="{{actor.data.defense}}" placeholder="2"/>
+	Initiative
+	<input name="data.initiative" type="number" value="{{actor.data.initiative}}" placeholder="2"/>
+	Sante
+	<input name="data.sante.value" type="number" value="{{actor.data.sante.value}}" placeholder="40"/>
+	<input name="data.sante.max" type="number" value="{{actor.data.sante.max}}" placeholder="40"/>
+	Endurence
+	<input name="data.endurence.value" type="number" value="{{actor.data.endurence.value}}" placeholder="40"/>
+	<input name="data.endurence.max" type="number" value="{{actor.data.endurence.max}}" placeholder="40"/>
+	<section class="abi">
+        <h3>Abilities</h3>
+        <ol class="actor-Abilitiess">
+		<a class="item-create" title="SheetAddItem" data-type="Abilities">
+			<i class="fas fa-plus"></i>
+		</a>
+        {{#each data.abi as |Abilities id|}}
+
+                <div class="Abilities-name">
+                  <img src="{{Abilities.img}}" title="{{Abilities.name}}" width="24" height="24"/>
+                    <h4>{{Abilities.name}}</h4>
+                </div>
+				<div class="Abilities-item item" data-item-id="{{Abilities._id}}">
+					<input class="Abilities-Niveau inline-edit" data-field="data.Niveau"  type="number" value="{{Abilities.data.Niveau}}" placeholder="1" data-dtype="Number" />
+				</div>
+                <div class="Abilities-controls item" data-item-id="{{Abilities._id}}">
+                    <a class="Abilities-control item-edit" title="Edit Abilities"><i class="fas fa-edit"></i></a>
+                    <a class="Abilities-control item-delete" title="Delete Abilities"><i class="fas fa-trash"></i></a>
+                </div>
+
+        {{/each}}
+        </ol>
+    </section>
+		  <section class="weak">
+        <h3>Weakness</h3>
+        <ol class="actor-Weaknesss">
+		<a class="item-create" title="SheetAddItem" data-type="Weakness">
+			<i class="fas fa-plus"></i>
+		</a>
+        {{#each data.weak as |Weakness id|}}
+
+                <div class="Weakness-name">
+                  <img src="{{Weakness.img}}" title="{{Weakness.name}}" width="24" height="24"/>
+                    <h4>{{Weakness.name}}</h4>
+                </div>
+				<div class="Weakness-item item" data-item-id="{{Weakness._id}}">
+					<input class="Weakness-Niveau inline-edit" data-field="data.Niveau"  type="number" value="{{Weakness.data.Niveau}}" placeholder="1" data-dtype="Number" />
+				</div>
+                <div class="Weakness-controls item" data-item-id="{{Weakness._id}}">
+                    <a class="Weakness-control item-edit" title="Edit Weakness"><i class="fas fa-edit"></i></a>
+                    <a class="Weakness-control item-delete" title="Delete Weakness"><i class="fas fa-trash"></i></a>
+                </div>
+
+        {{/each}}
+        </ol>
+    </section>
+</form>
+
